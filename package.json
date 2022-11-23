@@ -20,7 +20,8 @@
   "homepage": "https://github.com/Huntken26/employee-tracker#readme",
   "dependencies": {
     "console-table": "^0.1.2",
-    "inquirer": "^9.1.4",
+    "dotenv": "^16.0.3",
+    "inquirer": "^8.2.4",
     "mysql2": "^2.3.3"
   }
 }

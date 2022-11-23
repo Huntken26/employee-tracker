@@ -22,8 +22,8 @@ VALUES
 INSERT INTO employee(id, first_name, last_name, roles_id, manager_id)
 VALUES
     (001, "Richard", "Roarke", 005, 001),
-    (002, "Sally", "Greene", 004, 002),
-    (003, "Michelle", "Peters", 003, 005),
-    (004, "Mark", "Ralphienes", 002, 004),
-    (005, "Finn", "Wolf", 001. 003);
+    (002, "Sally", "Greene", 004, 001),
+    (003, "Michelle", "Peters", 003, 001),
+    (004, "Mark", "Ralphienes", 002, 002),
+    (005, "Finn", "Wolf", 001, 002);
     
