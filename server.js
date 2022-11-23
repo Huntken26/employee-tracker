@@ -5,21 +5,22 @@ require('dotenv').config();
 const app = express();
 const PORT = process.env.PORT || 3001;
 // Express middleware
-app.use(express.urlencoded({ extended: false }));
-app.use(express.json());
+// app.use(express.urlencoded({ extended: false }));
+// app.use(express.json());
+
 
 //Connect to database. Used code from one of ourclass activity files
-const db = mysql.createConnection(
-  {
-    host: 'localhost',
-    // MySQL username,
-    user: 'root',
-    // MySQL password and db from env file
-    password: process.env.DB.PASSWORD,
-    database: process.env.DB.NAME,
-  },
-  console.log(`Connected to the twitter_db database.`)
-);
+// const db = mysql.createConnection(
+//   {
+//     host: 'localhost',
+//     // MySQL username,
+//     user: 'root',
+//     // MySQL password and db from env file
+//     password: process.env.DB.PASSWORD,
+//     database: process.env.DB.NAME,
+//   },
+//   console.log(`Connected to the twitter_db database.`)
+// );
 
 // // Query database
 // db.query('SELECT * FROM students', function (err, results) {
