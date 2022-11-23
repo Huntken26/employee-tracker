@@ -27,4 +27,3 @@ CREATE TABLE employee (
     FOREIGN KEY(roles_id) REFERENCES roles(id)
 );
 
-CREATE TABLE ();
