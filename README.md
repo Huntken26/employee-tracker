@@ -23,7 +23,8 @@ This app needs the mysql2, inquirer and console table npm packages so you will n
 
 ## USAGE/INSTRUCTIONS:
 
-First use spl to set up the schema, then run seeds.sql, exit. Now npm install, node server.js, and let the node modules do the rest.
+First use spl to set up the schema, then run seeds.sql, exit. Now npm install, node server.js, and let the node modules do the rest. After the prompt comes up you simply select the option you want to see and the table will show on the console. Here is a video walkthrough: <br>
+https://user-images.githubusercontent.com/107738986/203475471-e6f8107f-1b31-4b00-895b-2fc8a94d595b.mp4
 
 ## CREDITS:
 
