@@ -1,11 +1,9 @@
-const express = require('express');
-// Import and require mysql2
+const inquirer = require('inquirer');
+const consoleTable = require('console.table');
 const mysql = require('mysql2');
 require('dotenv').config();
-
-const PORT = process.env.PORT || 3001;
 const app = express();
-const consoleTable = require('console.table');
+const PORT = process.env.PORT || 3001;
 // Express middleware
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
@@ -17,8 +15,8 @@ const db = mysql.createConnection(
     // MySQL username,
     user: 'root',
     // MySQL password and db from env file
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME,
+    password: process.env.DB.PASSWORD,
+    database: process.env.DB.NAME,
   },
   console.log(`Connected to the twitter_db database.`)
 );
