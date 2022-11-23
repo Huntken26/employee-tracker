@@ -18,11 +18,43 @@ const db = mysql.createConnection(
     console.log(`Connected to the twitter_db database.`)
 );
 
+// Here are all of my functions.It was suggested that I use queries seperately instead of inside of the if then statements like before.
+const showDepts = () => {
+    const query = `SELECT * FROM department`;
+    db.query(query,
+        function (err, res) {
+            if (err) throw err
+            console.table(res)
+            menu()
+        })
+};
+
+const showRoles = () => {
+    const query = `SELECT * FROM roles`;
+    db.query(query,
+        function (err, res) {
+            if (err) throw err
+            console.table(res)
+            menu()
+        })
+};
+
+const showEmployees = () => {
+    const query = `SELECT * FROM employee`;
+
+    db.query(query,
+        function (err, res) {
+            if (err) throw err
+            console.table(res)
+            menu()
+        })
+};
+
 // Prompt User for Choices
-const menuPrompt = () => {
+const menu = () => {
     inquirer.prompt([
         {
-            name: 'menu',
+            name: 'prompt',
             type: 'list',
             message: 'What would you like to do:',
             choices: [
@@ -38,78 +70,36 @@ const menuPrompt = () => {
         }
     ])
         .then((answers) => {
-            switch (answers.menu) {
+            switch (answers.prompt) {
                 case 'View all departments':
-                   
+                    showDepts();
                     break;
                 case 'View all roles':
-
+                    showRoles();
                     break;
                 case 'View all employees':
-
+                    showEmployees();
                     break;
                 case 'Add a department':
-
+                    showDepts();
                     break;
                 case 'Add a role':
+                    showRoles();
 
                     break;
                 case 'Add an employee':
-
-                    break;
-                case 'Update a role':
+                    showEmployees();
 
                     break;
 
                 default:
-                    menuPrompt();
+                    menu();
             }
-            //   if (choices === 'View all departments') {
-            //     db.query('SELECT * FROM department', function (err, results) {
-            //       console.log(results);
-            //     });
-            //   }
 
-            //   if (choices === 'View all roles') {
-            //     db.query('SELECT * FROM roles', function (err, results) {
-            //         console.log(results);
-            //       });
-            // }
-
-            // if (choices === 'View all employees') {
-            //     db.query('SELECT * FROM employee', function (err, results) {
-            //       console.log(results);
-            //     });
-            //   }
-
-            //   if (choices === 'Add a department') {
-
-            // }
-
-            // if (choices === 'Add a role') {
-
-            //   }
-
-            //   if (choices === 'Add an employee') {
-
-            // }
-
-            // if (choices === 'Update a role') {
-
-            //   }
-
-            //   if (choices === 'Exit') {
-            //      menuPrompt();
-            // }
 
         })
 };
 
-menuPrompt();
+menu();
 
-
-// // Query database
-// db.query('SELECT * FROM students', function (err, results) {
-//   console.log(results);
-// });
 

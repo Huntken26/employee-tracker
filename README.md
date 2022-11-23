@@ -28,9 +28,9 @@ First use spl to set up the schema, then run seeds.sql, exit. Now npm install, n
 ## CREDITS:
 
 I'd like to thank I would like to thank my instructor Kyle Davis, My tutor Chris Baird, AskBCS learning assistant. Also like to give credit to StackOverflow and w3 schools as well. for helping me with this project.
-Sites that assisted me:
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch
-https://github.com/sidorares/node-mysql2/blob/master/documentation/Promise-Wrapper.md
+Sites that assisted me: <br>
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch <br>
+https://github.com/sidorares/node-mysql2/blob/master/documentation/Promise-Wrapper.md <br>
 Also used assistance from U of Minn bootcamp activity 23 from our MYSQL Lessons.
 
 
